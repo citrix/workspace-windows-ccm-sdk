@@ -1,1 +1,7 @@
-# Programmers guide to Citrix CCM SDKCCM (Citrix Common Connection Manager) SDK provides APIs which can be used to get the ICA session information. This can be programmatically used in custom application to modify the appearance for the end user. ## Requirements### Client-Side RequirementsCCM SDK API is part of Citrix Receiver package, so Citrix Receiver needs to be installed on Client Machine.Make sure CCMSDK.dll and CCMProxy.dll in case of 32-bit machine and CCMSDK64.dll and CCMProxy64.dll in case of 64-bit machine are present in Receiver Install location. ### Server-Side RequirementsThe CCM SDK requires a ICA session running between client and Server.
+# Programmers guide to Citrix CCM SDKCCM (Citrix Common Connection Manager) SDK provides APIs that are used to obtain the session information. The information is used in a custom application to modify the appearance.## Requirements### Client-Side Requirements
+CCM SDK API is a part of Citrix Receiver for Windows installation package. Install Citrix Receiver on the client device. Ensure that the CCMSDK.dll and CCMProxy.dll (for 32-bit machine) and CCMSDK64.dll and CCMProxy64.dll (for 64-bit machine) are present in the Receiver installation folder.
+
+If you are using Citrix Receiver for Windows Version 4.11 and later, install the Microsoft Visual 2017 C++ Redistributable Package using the following link:
+
+* For x86 machine: [https://aka.ms/vs/15/release/vc_redist.x86.exe](https://aka.ms/vs/15/release/vc_redist.x86.exe)
+* For x64 machine: [https://aka.ms/vs/15/release/vc_redist.x64.exe](https://aka.ms/vs/15/release/vc_redist.x64.exe)  ### Server-Side RequirementsCCM SDK requires an active ICA session between the client and the server.
