@@ -1,15 +1,86 @@
-# Appendix## Type Definitions| Data Type | Definition |
-|---|---|| Long | CCMResult || Char | CCMBool || Char | CCMChar || Long | CCMConnectionID || Long | CCMSessionID || Long | CCMApplicationID || Long | CCMPid || unsigned int | CCMWindowID |
+# Appendix
 
-## Structures```typedef struct _CCM_Name_Value_Pair_{	IDL_STRING CCMChar* Name; //Name	IDL_STRING CCMChar* Value; // value} CCM_Name_Value_Pair, *PCCM_Name_Value_Pair;```
+## Type Definitions
+
+| Data Type | Definition |
+|---|---|
+| Long | CCMResult |
+| Char | CCMBool |
+| Char | CCMChar |
+| Long | CCMConnectionID |
+| Long | CCMSessionID |
+| Long | CCMApplicationID |
+| Long | CCMPid |
+| unsigned int | CCMWindowID |
+
+## Structures
+
 ```
-typedef struct _CCM_ICASession_{	CCMSessionID        SessionID;	CCMConnectionID     ConnectionID;	IDL_STRING CCMChar* FriendlyName;	IDL_STRING CCMChar* NonSeamlessAppTitle;	unsigned long       IsFullScreen;	unsigned long       Ssl;	IDL_STRING CCMChar* EncryptionLevel;	IDL_STRING CCMChar* EngineVersion;	IDL_STRING CCMChar* ServerName;	IDL_STRING CCMChar* UserName;	IDL_STRING CCMChar* DomainName;	unsigned long       RxFrameCount;	unsigned long       TxFrameCount;	unsigned long       RxByteCount;	unsigned long       TxByteCount;	unsigned long       RxFrameErrorCount;	unsigned long       TxFrameErrorCount;	unsigned long       SeamlessMode;	unsigned long       ZlMode;	unsigned long       CGP;	unsigned long       SpeedBrowseEnabled;	unsigned long       LastLatency;	unsigned long       AverageLatency;	unsigned long       RoundTripDeviation;	unsigned long       HRes;	unsigned long       VRes;	unsigned long       ColorDepth;	unsigned long       AudioEnabled;	unsigned long       PdaEnabled;	unsigned long       TwnEnabled;	unsigned long       PnpEnabled;} CCM_ICASession, *PCCM_ICASession;
+typedef struct _CCM_Name_Value_Pair_
+{
+ IDL_STRING CCMChar* Name; //Name
+ IDL_STRING CCMChar* Value; // value
+ } CCM_Name_Value_Pair, *PCCM_Name_Value_Pair;
+
 ```
 
 ```
-typedef struct _CCM_ICAApplication_{	CCMApplicationID    ApplicationID;	CCMSessionID        SessionID;	IDL_STRING CCMChar* FriendlyName;	IDL_STRING CCMChar* Title;	IDL_STRING CCMChar* ClassName;	unsigned long       IconSize;#ifdef CCM_IDL	[size_is(IconSize)]#endif	unsigned char*      IconData;     unsigned long       hIcon;} CCM_ICAApplication, *PCCM_ICAApplication;```
+typedef struct _CCM_ICASession_
+{
+ CCMSessionID        SessionID;
+ CCMConnectionID     ConnectionID;
+ IDL_STRING CCMChar* FriendlyName;
+ IDL_STRING CCMChar* NonSeamlessAppTitle;
+ unsigned long       IsFullScreen;
+ unsigned long       Ssl;
+ IDL_STRING CCMChar* EncryptionLevel;
+ IDL_STRING CCMChar* EngineVersion;
+ IDL_STRING CCMChar* ServerName;
+ IDL_STRING CCMChar* UserName;
+ IDL_STRING CCMChar* DomainName;
+ unsigned long       RxFrameCount;
+ unsigned long       TxFrameCount;
+ unsigned long       RxByteCount;
+ unsigned long       TxByteCount;
+ unsigned long       RxFrameErrorCount;
+ unsigned long       TxFrameErrorCount;
+ unsigned long       SeamlessMode;
+ unsigned long       ZlMode;
+ unsigned long       CGP;
+ unsigned long       SpeedBrowseEnabled;
+ unsigned long       LastLatency;
+ unsigned long       AverageLatency;
+ unsigned long       RoundTripDeviation;
+ unsigned long       HRes;
+ unsigned long       VRes;
+ unsigned long       ColorDepth;
+ unsigned long       AudioEnabled;
+ unsigned long       PdaEnabled;
+ unsigned long       TwnEnabled;
+ unsigned long       PnpEnabled;
+} CCM_ICASession, *PCCM_ICASession;
+```
 
-## CCM SDK Error Codes and macros| Error No | Define Name                      | Ver |
+```
+typedef struct _CCM_ICAApplication_
+{
+ CCMApplicationID    ApplicationID;
+ CCMSessionID        SessionID;
+ IDL_STRING CCMChar* FriendlyName;
+ IDL_STRING CCMChar* Title;
+ IDL_STRING CCMChar* ClassName;
+ unsigned long       IconSize;
+#ifdef CCM_IDL
+ [size_is(IconSize)]
+#endif
+ unsigned char*      IconData;
+     unsigned long       hIcon;
+} CCM_ICAApplication, *PCCM_ICAApplication;
+```
+
+## CCM SDK Error Codes and macros
+
+| Error No | Define Name                      | Ver |
 |----------|----------------------------------|-----|
 | 0        | CCM\_OK                           | 1   |
 | 65535    | CCM\_ERROR\_BASE                   | 1   |
