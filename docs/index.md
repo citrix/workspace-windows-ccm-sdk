@@ -1,4 +1,4 @@
-# Programmers guide to Citrix CCM SDK
+# Programmers guide to Citrix Common Connection Manager SDK for Citrix Workspace app for Windows 1808
 
 CCM (Citrix Common Connection Manager) SDK provides APIs that are used to obtain the session information. The information is used in a custom application to modify the appearance.
 
@@ -6,7 +6,7 @@ CCM (Citrix Common Connection Manager) SDK provides APIs that are used to obtain
 
 ### Client-Side Requirements
 
-CCM SDK API is a part of Citrix Workspace app for Windows installation package. Install Citrix Workspace app for Windows on the client device. Ensure that the `CCMSDK.dll` and `CCMProxy.dll` (for 32-bit machine) and `CCMSDK64.dll` and `CCMProxy64.dll` (for 64-bit machine) are present in the Citrix Workspace app for Windows installation folder.
+CCM SDK API is a part of Citrix Workspace app for Windows 1808 installation package. Install Citrix Workspace app for Windows on the client device. Ensure that the `CCMSDK.dll` and `CCMProxy.dll` (for 32-bit machine) and `CCMSDK64.dll` and `CCMProxy64.dll` (for 64-bit machine) are present in the Citrix Workspace app for Windows installation folder.
 
 If you are using Citrix Workspace aApp for Windows Version 4.11 and later, install the Microsoft Visual 2017 C++ Redistributable Package using the following link:
 
